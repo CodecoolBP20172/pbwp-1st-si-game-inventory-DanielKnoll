@@ -50,10 +50,9 @@ def print_table(inventory, order=None):
     indent_value += 4
 
     if order == "count,asc":
-        bubble_sort(sorted_inv)
+        sorted_inv.sort()
     elif order == "count,desc":
-        bubble_sort(sorted_inv)
-        sorted_inv = sorted_inv[::-1]
+        sorted_inv.sort(reverse=True)
 
     print("Inventory:")
     print("{}{}".format("count".rjust(indent_value), "item name".rjust(indent_item)))
